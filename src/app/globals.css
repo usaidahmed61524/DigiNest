@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-bg-img {
+  background: url(../../public/images/bg-gallaxy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgba(0, 0, 0, 0.6);
+  /* overflow: hidden; */
+}
+
+body.__className_e66fe9 {
+  background-color: black;
+}
+.spinner-border {
+  color: aqua;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
