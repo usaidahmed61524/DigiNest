@@ -17,6 +17,7 @@ const Page = () => {
   const [inputError, setInputError] = useState("");
   const [loading, setLoading] = useState(false);
   const [loginBtnVisible, setLoginBtnVisible] = useState(true);
+  const [userName, setUserName] = useState("");
 
 
   const auth = useAuth();
@@ -42,6 +43,8 @@ const Page = () => {
     const uservalidator = response?.data?.data
     if (uservalidator.success == true) {
       setLoginBtnVisible(false);
+      const user = domain.slice(0, -5);
+      setUserName("welcome " + user)
       handleClose()
       setLoading(false);
     }
@@ -72,24 +75,18 @@ const Page = () => {
 
     <div className="box-border w-full hero-bg-img">
 
-      <div className="flex flex-wrap items-center py-4 px-5 gap-4 bg-black text-white border-b border-[hsla(0,0%,100%,.3)]">
+      <div className="flex justify-between flex-wrap items-center py-4 px-5 gap-4 bg-black text-white border-b border-[hsla(0,0%,100%,.3)]">
         <div className="w-full sm:w-auto text-center sm:text-left text-4xl sm:mb-0">
-          <Image src={logo} className="mx-auto sm:mx-0 w-[150px] sm:w-[200px]" />
+          <Image src={logo} alt="logo" className="mx-auto sm:mx-0 w-[200px]" />
         </div>
+          <h2 className="text-center">{userName}</h2>
       </div>
-
 
       <div className="flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/2 p-6">
           <h3 className="text-[4rem] sm:text-[6rem] font-bold tracking-[-.03rem] text-white leading-[1.25] mb-6">
             Robust for coders. Speedy for all.
           </h3>
-          <button
-            className="bg-[#00ffbd] text-[#232323] py-3 px-5 rounded-full font-medium w-full sm:w-auto mb-4 hover:opacity-[0.60]"
-          >
-            Wallet Connect
-          </button>
-
           {loginBtnVisible ? (
             <button
               className="bg-black text-white py-3 px-5 rounded-full font-medium border border-white w-full sm:w-auto hover:opacity-[0.60]"
@@ -113,7 +110,7 @@ const Page = () => {
           ) : (
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Insert Your MMIT Domain</Modal.Title>
+                <Modal.Title className="text-[#fff]">Insert Your MMIT Domain</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form>
@@ -156,7 +153,7 @@ const Page = () => {
 
         <div className="w-full sm:w-1/2 flex justify-center">
           <div>
-            <Image src={model1} className="m-auto" />
+            <Image src={model1} alt="image" className="m-auto" />
           </div>
         </div>
       </div>

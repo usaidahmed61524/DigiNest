@@ -34,5 +34,32 @@ button.btn.btn-danger {
 }
 
 button.btn.btn-dark {
-  background-color: #212529 !important;
+  background-color: #000000 !important;
+}
+
+button.btn-close {
+  display: none;
+}
+
+.modal-content {
+  background: linear-gradient(45deg, #38193b66, #512749d9) !important;
+}
+
+.text-\[\#fff\].modal-title.h4 {
+  color: #fff !important;
+}
+
+.spinner-border {
+  display: inline-block !important;
+  width: 50px !important;
+  color: #000000 !important;
+  position: fixed !important;
+  top: 50% !important;
+  height: 50px !important;
+  left: 50% !important;
+  vertical-align: -0.125em !important;
+  background-color: currentColor !important;
+  border-radius: 50% !important;
+  -webkit-animation: .75s linear infinite spinner-grow !important;
+  animation: .75s linear infinite spinner-grow !important;
 }
