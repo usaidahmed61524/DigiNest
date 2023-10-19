@@ -138,7 +138,7 @@ const Page = () => {
                 </Form>
               </Modal.Body>
               <Modal.Footer>
-                <Button variant="danger" onClick={handleClose}>
+                <Button variant="light text-dark" onClick={handleClose}>
                   Close
                 </Button>
                 <Button variant="dark" onClick={onSubmit}>
