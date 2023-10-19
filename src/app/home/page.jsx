@@ -71,10 +71,7 @@ const Page = () => {
   };
   const handleShow = () => setShow(true);
   return (
-
-
     <div className="box-border w-full hero-bg-img">
-
       <div className="flex justify-between flex-wrap items-center py-4 px-5 gap-4 bg-black text-white border-b border-[hsla(0,0%,100%,.3)]">
         <div className="w-full sm:w-auto text-center sm:text-left text-4xl sm:mb-0">
           <Image src={logo} alt="logo" className="mx-auto sm:mx-0 w-[200px]" />
@@ -158,7 +155,6 @@ const Page = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
