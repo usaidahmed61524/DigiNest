@@ -63,3 +63,7 @@ button.btn-close {
   -webkit-animation: .75s linear infinite spinner-grow !important;
   animation: .75s linear infinite spinner-grow !important;
 }
+
+button.btn.btn-light.text-dark {
+  background-color: white !important;
+}
