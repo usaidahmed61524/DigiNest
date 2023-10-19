@@ -61,6 +61,7 @@ const Page = () => {
 
 
   const logOutUser = () => {
+    setUserName("")
     setLoginBtnVisible(true);
   };
 
@@ -76,7 +77,7 @@ const Page = () => {
         <div className="w-full sm:w-auto text-center sm:text-left text-4xl sm:mb-0">
           <Image src={logo} alt="logo" className="mx-auto sm:mx-0 w-[200px]" />
         </div>
-          <h2 className="text-center text-2xl">{userName}</h2>
+        <h2 className="text-center text-2xl">{userName}</h2>
       </div>
 
       <div className="flex flex-col sm:flex-row">
